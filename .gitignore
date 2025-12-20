@@ -8,3 +8,6 @@
 /tmp/
 
 .rspec_status
+
+# Gem files
+*.gem
