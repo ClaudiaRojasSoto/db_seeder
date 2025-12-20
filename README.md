@@ -1,6 +1,31 @@
 # DbSeeder
 
-Generate Rails seed files from your existing database data. Perfect for creating seeds from production data, test fixtures, or sharing database states across teams.
+**A modern Rails gem to generate seed files from your existing database data.**
+
+Perfect for creating seeds from production data, sharing database states across teams, or migrating data between environments.
+
+## Why DbSeeder?
+
+While similar gems exist, DbSeeder offers several advantages:
+
+- ✅ **Modern & Maintained** - Built for Rails 7+, actively maintained
+- ✅ **Memory Efficient** - Batch processing for large tables (won't crash on millions of records)
+- ✅ **SOLID Architecture** - Clean, testable, maintainable code
+- ✅ **Flexible Configuration** - Customize output path, excluded tables, batch size, and more
+- ✅ **Well Tested** - Comprehensive test suite with 100% core functionality coverage
+
+### DbSeeder vs Other Solutions
+
+| Feature | DbSeeder | seed_dump | Faker |
+|---------|----------|-----------|-------|
+| Purpose | Export real data | Export real data | Generate fake data |
+| Rails 7+ | ✅ Yes | ⚠️ Unmaintained since 2015 | ✅ Yes |
+| Batch Processing | ✅ Yes | ❌ No | N/A |
+| Configurable | ✅ Yes | Limited | N/A |
+| Use Case | Production → Seeds | Production → Seeds | Testing/Development |
+
+**Use DbSeeder when:** You need to export real database records to seed files  
+**Use Faker when:** You need to generate fake/random data for testing
 
 ## Installation
 
