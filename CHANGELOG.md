@@ -10,4 +10,3 @@
 - Support for Active Record models
 - Automatic model resolution or anonymous model creation
 - Ruby format output for seed files
-

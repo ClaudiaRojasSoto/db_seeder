@@ -24,4 +24,3 @@ module DbSeeder
     end
   end
 end
-
