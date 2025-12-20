@@ -2,8 +2,6 @@ PATH
   remote: .
   specs:
     db_seeder (0.1.0)
-      activerecord (>= 6.0)
-      activesupport (>= 6.0)
 
 GEM
   remote: https://rubygems.org/
@@ -71,6 +69,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  activerecord (~> 7.0)
   db_seeder!
   rake (~> 13.0)
   rspec (~> 3.0)

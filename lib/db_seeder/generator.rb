@@ -30,7 +30,7 @@ module DbSeeder
     def export_table(table_name)
       model_class = resolve_model(table_name)
       exporter = Exporter.new(model_class, config)
-      formatter = Formatter.for(config.format)
+      formatter = Formatter.for(config.format, model_class.name)
       
       output = formatter.format(exporter.export)
       write_output(table_name, output)
