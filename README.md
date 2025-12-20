@@ -66,7 +66,7 @@ bundle exec rspec
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/claudiapatriciarojassoto/db_seeder.
+Bug reports and pull requests are welcome on GitHub at https://github.com/ClaudiaRojasSoto/db_seeder.
 
 ## License
 

@@ -10,13 +10,13 @@ Gem::Specification.new do |spec|
 
   spec.summary = "Generate Rails seeds from existing database data"
   spec.description = "A Rails gem that automatically generates seed files from your existing database records, making it easy to replicate data across environments"
-  spec.homepage = "https://github.com/claudiapatriciarojassoto/db_seeder"
+  spec.homepage = "https://github.com/ClaudiaRojasSoto/db_seeder"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.1.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/claudiapatriciarojassoto/db_seeder"
-  spec.metadata["changelog_uri"] = "https://github.com/claudiapatriciarojassoto/db_seeder/blob/main/CHANGELOG.md"
+  spec.metadata["source_code_uri"] = "https://github.com/ClaudiaRojasSoto/db_seeder"
+  spec.metadata["changelog_uri"] = "https://github.com/ClaudiaRojasSoto/db_seeder/blob/main/CHANGELOG.md"
 
   gemspec = File.basename(__FILE__)
   spec.files = IO.popen(%w[git ls-files -z], chdir: __dir__, err: IO::NULL) do |ls|
