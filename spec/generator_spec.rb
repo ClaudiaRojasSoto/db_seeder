@@ -10,6 +10,12 @@ RSpec.describe DbSeeder::Generator do
       c.output_path = "tmp/test_seeds"
       c.excluded_tables = ["schema_migrations"]
       c.batch_size = 100
+      c.sanitize_rules = {
+        test_users: {
+          email: :random_email,
+          name: ->(_v) { "Anonymous User" }
+        }
+      }
     end
   end
 
@@ -55,8 +61,8 @@ RSpec.describe DbSeeder::Generator do
 
       content = File.read("tmp/test_seeds/test_users.rb", encoding: "UTF-8")
       expect(content).to include("TestUser.create!")
-      expect(content).to include("Juan Pérez")
-      expect(content).to include("María García")
+      expect(content).to include("Anonymous User")
+      expect(content).to match(/user_[0-9a-f]{8}@example\.com/)
     end
 
     it "creates output directory if it doesn't exist" do

@@ -4,6 +4,7 @@ require_relative "db_seeder/version"
 require_relative "db_seeder/configuration"
 require_relative "db_seeder/generator"
 require_relative "db_seeder/exporter"
+require_relative "db_seeder/sanitizer"
 require_relative "db_seeder/formatter"
 require_relative "db_seeder/railtie" if defined?(Rails::Railtie)
 

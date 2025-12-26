@@ -25,6 +25,7 @@ RSpec.describe DbSeeder do
       expect(config.output_path).to eq("db/seeds")
       expect(config.batch_size).to eq(1000)
       expect(config.format).to eq(:ruby)
+      expect(config.sanitize_rules).to eq({})
     end
   end
 end
