@@ -1,5 +1,10 @@
 ## [Unreleased]
 
+## [0.1.1] - 2025-12-26
+
+### Added
+- Automatic sanitization rules (`sanitize_rules`) for exported seed data
+
 ## [0.1.0] - 2025-12-20
 
 ### Added

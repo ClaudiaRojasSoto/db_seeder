@@ -64,6 +64,12 @@ DbSeeder.configure do |config|
   config.excluded_tables = %w[schema_migrations ar_internal_metadata sessions]
   config.batch_size = 1000
   config.format = :ruby
+  config.sanitize_rules = {
+    users: {
+      email: :random_email,
+      name: ->(_v) { "Anonymous User" }
+    }
+  }
 end
 ```
 
@@ -81,6 +87,7 @@ DbSeeder.generate
 - `excluded_tables`: Tables to skip (default: schema_migrations, ar_internal_metadata)
 - `batch_size`: Records per batch (default: 1000)
 - `format`: Output format (default: :ruby)
+- `sanitize_rules`: Per-table attribute sanitization rules (default: {})
 
 ## Development
 
