@@ -7,6 +7,7 @@ module DbSeeder
     def initialize(model, config)
       @model = model
       @config = config
+      @sanitizer = DbSeeder::Sanitizer.new(config)
     end
 
     def export
@@ -20,7 +21,13 @@ module DbSeeder
     private
 
     def serialize_record(record)
-      record.attributes.except("id", "created_at", "updated_at").symbolize_keys
+      raw =
+        record
+          .attributes
+          .except("id", "created_at", "updated_at")
+          .symbolize_keys
+
+      @sanitizer.sanitize(model, raw)
     end
   end
 end
