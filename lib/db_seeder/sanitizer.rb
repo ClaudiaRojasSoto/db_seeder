@@ -8,8 +8,6 @@ module DbSeeder
       @rules = config.sanitize_rules || {}
     end
 
-    # model: ActiveRecord model class
-    # attributes: hash (string/symbol keys)
     def sanitize(model, attributes)
       model_key = model_config_key(model)
       model_rules = @rules[model_key] || {}
@@ -50,11 +48,8 @@ module DbSeeder
       end
     end
 
-    # reserved for future expansion without changing the public API
     def rule_context(_value)
       {}
     end
   end
 end
-
-
